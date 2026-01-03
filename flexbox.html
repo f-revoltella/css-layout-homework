@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 12px;
+        background: #f2f2f2;
+        border-radius: 10px;
+        margin-bottom: 24px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: #111;
+        padding: 8px 10px;
+      }
+
+      .cards {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        flex: 1; 
+        min-width: 220px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 16px;
+        background: #fff;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .card p {
+        margin-top: 8px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Flexbox</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Support</a>
+      <a href="#">Updates</a>
+      <a href="#">Contacts</a>
+    </nav>
+
+    <section class="cards">
+      <div class="card">
+        <h2>Card One</h2>
+        <p>This card has simple text.</p>
+      </div>
+
+      <div class="card">
+        <h2>Card Two</h2>
+        <p>This card has a little bit more text, but the cards still stay the same height.</p>
+      </div>
+
+      <div class="card">
+        <h2>Card Three</h2>
+        <p>On smaller screens, the cards move onto a new line.</p>
+      </div>
+    </section>
+  </body>
+</html>
