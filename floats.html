@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Floats</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 24px;
+        max-width: 900px;
+      }
+
+      .wrap::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      img.float-left {
+        float: left;
+        margin: 0 16px 12px 0;
+        width: 220px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS Floats</h1>
+
+    <div class="wrap">
+      <img
+        class="float-left"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1280px-Cat_November_2010-1a.jpg"
+        alt="Image example"
+      />
+
+      <p>
+        This text wraps around the image because the image is floated to the left.
+      </p>
+
+      <p>
+        Margin is added so the text does not touch the image.
+      </p>
+    </div>
+
+    <p>
+      This paragraph appears below the image because the float has been cleared.
+    </p>
+  </body>
+</html>
